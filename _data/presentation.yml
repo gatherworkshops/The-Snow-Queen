@@ -1,0 +1,54 @@
+- sectionname: drawing
+  slides:
+
+    - filename: title-page
+      class: title-slide
+
+    - filename: basic-shapes
+      class: subtitle-slide
+
+    - filename: canvas
+      class: centered-slide
+
+    - filename: lines
+      class: centered-slide
+
+    - filename: ellipses
+      class: centered-slide
+
+    - filename: rectangles
+      class: centered-slide
+
+    - filename: basic-shapes-activity
+      class: centered-slide
+
+    - filename: changing-colours
+      class: subtitle-slide
+
+    - filename: rgb-colours
+      class: centered-slide
+
+    - filename: setting-the-colour
+      class: centered-slide
+
+    - filename: transparency
+      class: centered-slide
+
+    - filename: gradients
+      class: centered-slide
+
+    - filename: changing-colours-activity
+      class: centered-slide
+
+    - filename: using-images
+      class: subtitle-slide
+
+    - filename: generative-art
+      class: centered-slide
+
+    - filename: quests-for-the-curious
+      class: default-slide
+
+
+
+
