@@ -1,5 +1,0 @@
-## Colours
-
-
-Note:
-Hex colours!
