@@ -8,8 +8,8 @@ title: Presentation
 
 		<!-- slide -->
 		<section 
+			data-markdown
 			class="{{ slide.class }}" 
-			data-markdown="{{ site.baseurl }}/slideshow/{{ section.sectionname }}/{{ slide.filename }}.md" 
 			data-notes="^Note:" 
 			data-vertical="^Subpage:" 
 			
@@ -23,6 +23,27 @@ title: Presentation
 				id="{{ section.sectionname }}--{{ slide.filename }}"
 			{% endif %}
 		>
+
+		{% capture loop %}
+			{% for slidefile in site.slides %}
+
+				{% assign filepath = slidefile.url | split: "/"  %}
+				{% assign filename = filepath | last %}
+				{% assign sectionname = filepath[2] %}
+				{% assign splitfilename = filename | split: "." %}
+				{% assign slidename = splitfilename | first %}
+
+				{% if slidename == slide.filename and sectionname == section.sectionname %}
+
+					{% assign slidecontent = slidefile.content %}
+
+				{% endif %}
+
+			{% endfor %}
+		{% endcapture %}{% assign loop = nil%}
+
+		{{ slidecontent }}
+
 		</section>
 
 		{% endfor %}
