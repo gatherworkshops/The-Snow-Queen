@@ -22,7 +22,7 @@ title: Presentation
 			{% else %}
 				id="{{ section.sectionname }}--{{ slide.filename }}"
 			{% endif %}
-		>
+		><script type="text/template">
 
 		{% capture loop %}
 			{% for slidefile in site.slides %}
@@ -42,8 +42,9 @@ title: Presentation
 			{% endfor %}
 		{% endcapture %}{% assign loop = nil%}
 
-		{{ slidecontent }}
+{{ slidecontent }}
 
+		</script>
 		</section>
 
 		{% endfor %}
