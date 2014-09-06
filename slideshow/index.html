@@ -24,25 +24,10 @@ title: Presentation
 			{% endif %}
 		><script type="text/template">
 
-		{% capture loop %}
-			{% for slidefile in site.slides %}
+		{% assign slidefile = 'slides/' | append: section.sectionname | append: '/'  %}
+		{% assign slidefile = slidefile | append: slide.filename | append: '.md' %}
 
-				{% assign filepath = slidefile.url | split: "/"  %}
-				{% assign filename = filepath | last %}
-				{% assign sectionname = filepath[2] %}
-				{% assign splitfilename = filename | split: "." %}
-				{% assign slidename = splitfilename | first %}
-
-				{% if slidename == slide.filename and sectionname == section.sectionname %}
-
-					{% assign slidecontent = slidefile.content %}
-
-				{% endif %}
-
-			{% endfor %}
-		{% endcapture %}{% assign loop = nil%}
-
-{{ slidecontent }}
+{% include {{slidefile}} %}
 
 		</script>
 		</section>
