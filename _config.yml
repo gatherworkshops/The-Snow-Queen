@@ -2,5 +2,3 @@ name: The Snow Queen
 baseurl: "/The-Snow-Queen"
 markdown: redcarpet
 highlighter: true
-collections:
-- slides
